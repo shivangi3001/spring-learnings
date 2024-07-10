@@ -2,3 +2,4 @@ Initial commit
 Commit on 2024-05-29T09:53:27+05:30: Refactored code
 Commit on 2024-06-04T11:25:07+05:30: Updated documentation
 Commit on 2024-06-23T21:02:21+05:30: Added new feature
+Commit on 2024-07-11T02:22:42+05:30: Fixed bug in logic
