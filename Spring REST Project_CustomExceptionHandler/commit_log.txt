@@ -3,3 +3,4 @@ Commit on 2024-07-08T15:55:16+05:30: Initial project setup
 Commit on 2024-07-17T16:29:34+05:30: Initial project setup
 Commit on 2024-07-23T18:52:36+05:30: Initial project setup
 Commit on 2024-08-17T19:42:17+05:30: Fixed bug in logic
+Commit on 2024-08-17T22:45:58+05:30: Updated documentation
