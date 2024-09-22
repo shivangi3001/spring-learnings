@@ -1,2 +1,3 @@
 Initial commit
 Commit on 2024-09-03T19:33:43+05:30: Updated documentation
+Commit on 2024-09-23T04:48:21+05:30: Initial project setup
