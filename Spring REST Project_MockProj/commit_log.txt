@@ -4,3 +4,4 @@ Commit on 2024-07-07T08:25:14+05:30: Fixed bug in logic
 Commit on 2024-07-10T07:33:12+05:30: Updated documentation
 Commit on 2024-07-26T14:41:55+05:30: Refactored code
 Commit on 2024-08-15T05:13:18+05:30: Added new feature
+Commit on 2024-10-13T23:41:49+05:30: Updated documentation
