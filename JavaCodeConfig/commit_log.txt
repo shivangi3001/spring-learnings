@@ -3,3 +3,4 @@ Commit on 2024-07-12T11:29:57+05:30: Initial project setup
 Commit on 2024-08-12T07:55:08+05:30: Added new feature
 Commit on 2024-08-31T08:36:02+05:30: Refactored code
 Commit on 2024-10-18T14:56:56+05:30: Updated documentation
+Commit on 2024-11-02T22:34:29+05:30: Updated documentation
