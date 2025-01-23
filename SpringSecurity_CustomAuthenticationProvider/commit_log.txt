@@ -1,3 +1,4 @@
 Initial commit
 Commit on 2024-12-17T03:17:43+05:30: Added new feature
 Commit on 2025-01-12T20:44:51+05:30: Fixed bug in logic
+Commit on 2025-01-23T11:42:34+05:30: Initial project setup
