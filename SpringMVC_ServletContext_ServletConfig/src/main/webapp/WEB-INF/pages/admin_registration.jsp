@@ -1,0 +1,1 @@
+<h1>Welcome to Admin Registration Page </h1>

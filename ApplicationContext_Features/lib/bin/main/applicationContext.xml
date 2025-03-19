@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.app.beans.Student"  id="student" scope="singleton" lazy-init="true">
+      <property name="name" value="Amit"></property>
+      </bean>
+      
+      
+      <bean class="com.app.beans.Delhivery"   id="logistics1"  scope="prototype" lazy-init="true">
+      
+        </bean>
+     
+      <bean class="com.app.beans.Amazon"  id="amazon"  scope="singleton" lazy-init="true">
+         <property name="delhivery"  ref="logistics1"></property>
+        </bean>
+     
+
+</beans>

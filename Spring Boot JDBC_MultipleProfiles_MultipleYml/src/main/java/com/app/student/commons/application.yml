@@ -1,0 +1,4 @@
+#this is our base or default yml file
+spring:
+  profiles:
+    active: prod

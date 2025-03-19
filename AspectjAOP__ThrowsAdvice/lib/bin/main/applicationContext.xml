@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd
+		 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		">
+
+	<!-- configure the spring beans  -->
+	
+	<bean class="com.app.service.ShoppingStore" id="store"></bean>
+	<bean class="com.app.aspect.CommonExceptionLogger" id="exLogAspect"></bean>
+	
+	
+	<aop:config>
+	
+	  <!-- pointcut -->
+	  
+	  <aop:pointcut expression="execution(* com.app.service.ShoppingStore.generateBill(..))" id="ptc"/>
+	  
+	  <aop:aspect ref="exLogAspect">
+	   <aop:after-throwing method="logException" pointcut-ref="ptc" throwing="e" />
+	   </aop:aspect>
+	
+	  </aop:config>
+		
+
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+</beans>

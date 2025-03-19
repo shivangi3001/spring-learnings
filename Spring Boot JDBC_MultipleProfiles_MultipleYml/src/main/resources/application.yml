@@ -1,0 +1,51 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/finisher_batch
+    username: root
+    password: Ankit@$7668
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/finisher_batch
+    username: root
+    password: Ankit@$7668
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+
+---
+spring:
+  config:
+    activate:
+      on-profile: uat
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    type: org.apache.commons.dbcp2.BasicDataSource
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    type: org.apache.commons.dbcp2.BasicDataSource
+
+---
+spring:
+  profiles:
+   active: prod

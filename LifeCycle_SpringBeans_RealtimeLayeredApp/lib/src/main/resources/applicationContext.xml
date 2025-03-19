@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd"> 
+        
+        
+        <!-- bean definitions here -->
+
+
+
+    <!-- bean definitions here -->
+    
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="ds" >
+     <property name="driverClassName" value="${jdbc.driver}" />
+     <property name="username" value="${jdbc.username}" />
+     <property name="password" value="${jdbc.password}" />
+    </bean>
+    
+     <bean class="org.springframework.jdbc.datasource.SingleConnectionDataSource"
+            id="ds1"  parent="ds"></bean>
+            
+                      
+     
+
+   
+   <bean class="com.app.student.dao.StudentDaoImpl" id="studentDao" scope="singleton">
+    <constructor-arg name="dataSource">
+     
+      <bean class="com.zaxxer.hikari.HikariDataSource"  id="hikariDs" parent="ds" scope="singleton" >
+        <property name="jdbcUrl" value="${jdbc.url}" />
+     </bean>
+     
+     </constructor-arg>
+    </bean>
+    
+   
+     
+     
+     
+     <bean class="com.app.student.controller.StudentMainController" id="mainController" scope="singleton">
+      <constructor-arg name="studentService">
+         <bean class="com.app.student.service.StudentServiceImpl" id="studentService" scope="singleton">
+     <constructor-arg name="studentDao" ref="studentDao"></constructor-arg>
+     </bean>
+       </constructor-arg>
+      </bean>
+     
+     
+     <!-- 
+     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"  >
+     
+         <property name="location"   value="com/app/commons/db_config.properties"></property>
+     
+      </bean> -->
+     
+     
+     
+     <context:property-placeholder   location="com/app/commons/db_config.properties, com/app/commons/database.properties"  />
+     
+   <context:annotation-config></context:annotation-config>
+     
+     
+     
+     
+
+</beans>
